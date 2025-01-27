@@ -1,0 +1,341 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background: linear-gradient(to right, #2e3b4e, #1a232d);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .layar-dalam {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 60px;
+  }
+  
+  .menu ul {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .menu a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu a:hover {
+    background-color: #f2c94c;
+    color: #333;
+  }
+  
+  /* Mobile Menu */
+  .tombol-menu {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #2e3b4e;
+      width: 250px;
+      padding: 10px 0;
+      border-radius: 10px;
+    }
+  
+    .tombol-menu {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .tombol-menu .garis {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+    }
+  
+    .menu.active ul {
+      display: flex;
+    }
+  }
+  
+  /* Main Header */
+  header {
+    position: relative;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  header .intro {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h3 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  header p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  header .tombol {
+    background-color: #f2c94c;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  header .tombol:hover {
+    background-color: #d9b63a;
+    transform: translateY(-3px);
+  }
+  
+  /* Profile Section */
+  section#profile {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  section#profile h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #2e3b4e;
+  }
+  
+  section#profile .konten-isi h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  
+  section#profile li {
+    font-size: 18px;
+    margin-left: 30px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #555;
+  }
+  
+  /* Curriculum Section */
+  section#kurikulum {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+  }
+  
+  section#kurikulum .layar-dalam {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  section#kurikulum div {
+    width: 48%;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  section#kurikulum div:hover {
+    transform: translateY(-5px);
+  }
+  
+  section#kurikulum h6 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2e3b4e;
+  }
+  
+  section#kurikulum p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #777;
+  }
+  
+  /* Gallery Section */
+  section#gallery {
+    padding: 60px 0;
+    background-color: #fff;
+  }
+  
+  section#gallery div {
+    display: inline-block;
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  
+  section#gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  section#gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  section#gallery li {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    background: #2e3b4e;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  footer h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  footer .copyright {
+    font-size: 14px;
+    margin-top: 30px;
+    color: #ccc;
+  }
+  
+  footer .layar-dalam div {
+    width: 48%;
+  }
+  
+  footer .layar-dalam div a {
+    color: white;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+  
+  footer .layar-dalam div a:hover {
+    color: #f2c94c;
+  }
+  
+  /* Quote Section */
+  section.quote {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+  }
+  
+  section.quote .layar-dalam {
+    text-align: center;
+  }
+  
+  section.quote h3 {
+    font-size: 28px;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Add Media Queries for Responsiveness */
+  @media screen and (max-width: 768px) {
+    .layar-dalam {
+      flex-direction: column;
+    }
+  
+    section#profile .konten-isi {
+      padding: 0 15px;
+    }
+  
+    section#kurikulum .layar-dalam {
+      flex-direction: column;
+    }
+  
+    section#kurikulum div {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    footer .layar-dalam {
+      flex-direction: column;
+    }
+  }
